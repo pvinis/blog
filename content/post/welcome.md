@@ -6,3 +6,4 @@ draft = false
 +++
 
 This is a test.
+![bla](/img/pvinis-logo-lines.png)
