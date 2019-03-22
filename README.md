@@ -1,3 +1,6 @@
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/94dd4712-edbd-405e-91d8-2be47d393e24/deploy-status)](https://app.netlify.com/sites/happy-thompson-8bafcc/deploys)
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
