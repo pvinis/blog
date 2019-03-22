@@ -1,0 +1,9 @@
+repository:
+  # See https://developer.github.com/v3/repos/#edit for all available settings.
+  name: blog
+  description: my blog posts
+
+  homepage: https://pvin.is
+
+  private: false
+  
