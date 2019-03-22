@@ -1,7 +1,0 @@
-languageCode = "en-us"
-title = "Pavlos Vinieratos"
-baseurl = "https://pvin.is/"
-
-[Params]
-  Author = "Pavlos Vinieratos"
-  googleAnalytics = "UA-73212306-1"
