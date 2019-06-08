@@ -1,3 +1,6 @@
+const GOOGLE_ANALYTICS_ID = 'UA-141718871-1'
+
+
 module.exports = {
     siteMetadata: {
         title: 'Purple Royale',
@@ -13,7 +16,7 @@ module.exports = {
         {
             resolve: 'gatsby-plugin-google-analytics',
             options: {
-                trackingId: 'UA-141725733-1',
+                trackingId: GOOGLE_ANALYTICS_ID,
                 head: true,
             },
         },
@@ -58,20 +61,20 @@ module.exports = {
         {
             resolve: 'gatsby-plugin-google-analytics',
             options: {
-                //trackingId: `ADD YOUR TRACKING ID HERE`,
+                trackingId: GOOGLE_ANALYTICS_ID,
             },
         },
         'gatsby-plugin-feed',
         {
             resolve: 'gatsby-plugin-manifest',
             options: {
-                name: 'Gatsby Starter Blog',
-                short_name: 'GatsbyJS',
+                name: 'Purple Royale',
+                short_name: 'pvin.is',
                 start_url: '/',
                 background_color: '#ffffff',
                 theme_color: '#663399',
                 display: 'minimal-ui',
-                icon: 'content/assets/gatsby-icon.png',
+                icon: 'content/assets/colors-small.png',
             },
         },
         'gatsby-plugin-offline',
