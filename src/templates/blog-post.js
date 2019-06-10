@@ -16,7 +16,7 @@ class BlogPostTemplate extends React.Component {
             <Layout location={this.props.location} title={siteTitle}>
                 <SEO
                     title={post.frontmatter.title}
-                    description={post.frontmatter.description || post.excerpt}
+                    description={post.excerpt}
                 />
                 <h1>{post.frontmatter.title}</h1>
                 <p
@@ -27,8 +27,8 @@ class BlogPostTemplate extends React.Component {
                         marginTop: rhythm(-1),
                     }}
                 >
-              {post.frontmatter.date}
-          </p>
+                    {post.frontmatter.date}
+                </p>
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
                 <hr
                     style={{
@@ -46,21 +46,21 @@ class BlogPostTemplate extends React.Component {
                         padding: 0,
                     }}
                 >
-              <li>
+                    <li>
                         {previous && (
                             <Link to={previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
                             </Link>
                         )}
                     </li>
-              <li>
+                    <li>
                         {next && (
                             <Link to={next.fields.slug} rel="next">
                                 {next.frontmatter.title} →
                             </Link>
                         )}
                     </li>
-          </ul>
+                </ul>
             </Layout>
         )
     }
@@ -83,7 +83,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
-        description
       }
     }
   }
