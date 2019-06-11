@@ -55,15 +55,14 @@ class Layout extends React.Component {
             )
         }
         return (
-            <>
+            <div>
                 <Global
                     styles={{
                         '@font-face': {
                             fontFamily: 'Iosevka',
-                            fontWeight: 300,
-                            fontStyle: 'italic',
                             src: 'url(woff2/iosevka-thinitalic.woff2) format(woff2)',
                         },
+            div: { color: 'white' }
                     }}
                 />
                 <div
@@ -92,7 +91,7 @@ class Layout extends React.Component {
                     with 💜
                     </footer>
                 </div>
-            </>
+            </div>
         )
     }
 }
