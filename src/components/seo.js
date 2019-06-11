@@ -7,8 +7,10 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
+import { map, pipe, keys } from 'ramda'
 import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
+import Fonts from '../utils/fonts'
 
 
 function SEO({ description, lang, meta, keywords, title }) {
@@ -35,15 +37,18 @@ function SEO({ description, lang, meta, keywords, title }) {
             }}
             title={title}
             titleTemplate={`%s | ${site.siteMetadata.title}`}
-            link={[
-                {
-                    rel: 'preload',
-                    href: '/fonts/iosevka-light.woff2',
-                    as: 'font',
-                    type: 'font/woff2',
-                    crossOrigin: 'anonymous',
-                },
-            ]}
+            link={
+                pipe(
+                    keys,
+                    map(key => ({
+                        rel: 'preload',
+                        href: `/fonts/${Fonts.Iosevka[key].name}.woff2`,
+                        as: 'font',
+                        type: 'font/woff2',
+                        crossOrigin: 'anonymous',
+                    }))
+                )(Fonts.Iosevka)
+            }
             meta={[
                 {
                     name: 'description',
