@@ -35,6 +35,15 @@ function SEO({ description, lang, meta, keywords, title }) {
             }}
             title={title}
             titleTemplate={`%s | ${site.siteMetadata.title}`}
+            link={[
+                {
+                    rel: 'preload',
+                    href: '/fonts/iosevka-light.woff2',
+                    as: 'font',
+                    type: 'font/woff2',
+                    crossOrigin: 'anonymous',
+                },
+            ]}
             meta={[
                 {
                     name: 'description',

@@ -38,7 +38,7 @@ function Bio() {
                                 borderRadius: '50%',
                             }}
                         />
-                        <p>
+                        <p style={{ fontFamily: 'Iosevka' }}>
                             Written by <strong>{author}</strong> who currently lives and works in Rotterdam building useful things.
                             {' '}
                             <a href={`https://twitter.com/${social.twitter}`}>
