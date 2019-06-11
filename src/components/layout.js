@@ -60,7 +60,7 @@ class Layout extends React.Component {
                     styles={{
                         '@font-face': {
                             fontFamily: 'Iosevka',
-                            src: 'url(/fonts/iosevka-light.woff2) format(woff2), url(/fonts/iosevka-light.woff) format(woff)',
+                            src: 'url(\'/fonts/iosevka-light.woff2\') format(\'woff2\'), url(\'/fonts/iosevka-light.woff\') format(\'woff\')',
                         },
                     }}
                 />
