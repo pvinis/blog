@@ -62,7 +62,6 @@ class Layout extends React.Component {
                             fontFamily: 'Iosevka',
                             src: 'url(woff2/iosevka-thinitalic.woff2) format(woff2)',
                         },
-            div: { color: 'white' }
                     }}
                 />
                 <div
