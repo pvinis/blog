@@ -86,5 +86,14 @@ module.exports = {
             },
         },
         'gatsby-plugin-emotion',
+        {
+            resolve: 'gatsby-plugin-web-font-loader',
+            options: {
+                custom: {
+                    families: ['Iosevka Web'],
+                    urls: ['/fonts/iosevka/webfont.css'],
+                },
+            },
+        },
     ],
 }
