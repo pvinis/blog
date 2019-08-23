@@ -70,52 +70,7 @@ const Layout = (props) => {
         .
     </>)
 
-    return (<>
-        <Global
-            // styles={{
-            styles={css`
-                @font-face: {
-                    font-family: 'Iosevka';
-                    font-weight: 900;
-                    font-style: normal;
-                    src: url('/fonts/iosevka-heavy.woff2') format('woff2'), url('/fonts/iosevka-heavy.woff') format('woff');
-                }
-                @font-face: {
-                    font-family: 'Iosevka';
-                    font-weight: 100;
-                    font-style: normal;
-                    src: url('/fonts/iosevka-thin.woff2') format('woff2'), url('/fonts/iosevka-thin.woff') format('woff');
-                }
-                `
-                // '@font-face': [
-                //     {
-                //         fontFamily: 'Iosevka',
-                //         fontWeight: 100,
-                //         fontStyle: 'normal',
-                //         src: 'url(\'/fonts/iosevka-thin.woff2\') format(\'woff2\'), url(\'/fonts/iosevka-thin.woff\') format(\'woff\')',
-                //     },
-                //     {
-                //         fontFamily: 'Iosevka',
-                //         fontWeight: 900,
-                //         fontStyle: 'normal',
-                //         src: 'url(\'/fonts/iosevka-heavy.woff2\') format(\'woff2\'), url(\'/fonts/iosevka-heavy.woff\') format(\'woff\')',
-                //     },
-                // ],
-                // '@font-face': pipe(
-                //     keys,
-                //     map(key => {
-                //         const { name, style, weight } = Fonts.Iosevka[key]
-                //         return {
-                //             fontFamily: 'Iosevka',
-                //             fontWeight: weight,
-                //             fontStyle: style,
-                //             src: `url('/fonts/${name}.woff2') format('woff2'), url('/fonts/${name}.woff') format('woff')`,
-                //         }
-                //     }),
-                // )(Fonts.Iosevka),
-            // }}
-            }
-        />
+    return (
         <div
             style={{
                 marginLeft: 'auto',
@@ -128,6 +83,6 @@ const Layout = (props) => {
             <main>{children}</main>
             <footer>{footer}</footer>
         </div>
-    </>)
+    )
 }
 export default Layout
