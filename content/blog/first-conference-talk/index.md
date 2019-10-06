@@ -3,7 +3,6 @@ title: My first conference as a speaker
 date: "2019-10-07T07:41:32.169Z"
 ---
 
-```
 In the beginning of September I was in Poland for the React Native EU conference. It's the biggest european conference focused on React Native, which is the technology we use to build our NiceDay app for both iOS and Android. There are a bunch of them all over the world, some for React Native and some for React (which is a similar technology to build a website). Each of the conferences invites people to become speakers, and this year for this conference I got invited to give a talk on the topic of upgrading React Native apps.
 
 For context, a lot of developers that use React Native have trouble upgrading their apps when a new version comes out. I always had a specific way to upgrade that was working well for me and a few other devs that I had talked to. I took a script that helped me and modified it to work with all the versions of RN. It would generate some files that could be used by devs. It made upgrading easier by making the differences between version more understandable and clear. Then I made a simple website that could display these files. After this got a few users, and even some contributors, I was invited to talk in that conference, in order to show it to everyone that was interested. Some of the people attending the conference were using my "upgrade flow", but a lot of them were not, so the idea was that I will present it, explain it, and hopefully help RN devs when they googled how to upgrade easily.
@@ -21,5 +20,3 @@ Link to conference: https://react-native.eu/
 Link to videos: https://www.youtube.com/channel/UCbvLih553T7f5OAGTfbsJkQ/videos
 
 Link to photos: https://www.facebook.com/pg/reactnativeeu/photos/?tab=album&album_id=658228464664869
-
-```
