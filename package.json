@@ -33,7 +33,7 @@
     "ramda": "0.26.1",
     "react": "16.11.0",
     "react-dom": "16.11.0",
-    "react-helmet": "5.2.1",
+    "react-helmet": "6.1.0",
     "react-typography": "0.16.19",
     "rxjs": "6.5.3",
     "typeface-merriweather": "0.0.72",
