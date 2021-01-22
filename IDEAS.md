@@ -1,0 +1,2 @@
+- about starting
+- about humans.txt
