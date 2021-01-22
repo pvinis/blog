@@ -1,5 +1,6 @@
 pvin.is
 
+used https://github.com/JoseRFelix/nextjs-starter-blog for template
 ## ✏ Features
 
 - Streamlined styling experience with [Tailwind.css](https://tailwindcss.com/).
@@ -39,3 +40,4 @@ For more information, please check out Tailwind Typography's [customization sect
 ## todo
 
 - add a script to create a new post
+- add scripts to share/distribute my posts to dev.to, medium, whatever

@@ -1,0 +1,16 @@
+{
+  "siteMetadata": {
+    "title": "Purple Royale",
+    "author": {
+      "name": "Pavlos Vinieratos",
+      "summary": "who does React Native."
+    },
+    "description": "The website and blog of Pavlos, where he writes about code and codes about stuff.",
+    "siteUrl": "https://pvin.is",
+    "language": "en-US",
+    "social": {
+      "twitter": "pvinis",
+      "github": "pvinis"
+    }
+  }
+}

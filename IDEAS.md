@@ -1,2 +1,3 @@
 - about starting
 - about humans.txt
+- about color naming, lavender, purple royale etc
