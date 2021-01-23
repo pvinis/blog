@@ -43,6 +43,7 @@ export default function Post({ post, frontmatter, nextPost, previousPost }) {
         ) : (
           <div />
         )}
+{previousPost && nextPost ? <span>|</span> : null}
         {nextPost ? (
           <Link href={"/post/[slug]"} as={`/post/${nextPost.slug}`}>
             <a className="text-lg font-bold">{nextPost.frontmatter.title} →</a>
