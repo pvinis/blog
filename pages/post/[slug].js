@@ -28,7 +28,7 @@ export default function Post({ post, frontmatter, nextPost, previousPost }) {
           renderers={{ code: CodeBlock, image: MarkdownImage }}
         />
         <hr className="mt-4" />
-    <a href={`https://github.com/pvinis/blog/tree/master/content/posts/${post.slug}/${post.slug}.md`}>Source code for this post.</a>
+    <a href={`https://github.com/pvinis/blog/tree/master/content/posts/${slug}/${slug}.md`}>Source code for this post.</a>
         <footer>
           <Bio className="mt-8 mb-16" />
         </footer>
