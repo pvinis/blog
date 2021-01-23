@@ -78,5 +78,5 @@ export function getPostBySlug(slug) {
   const previousPost = posts[postIndex + 1];
   const nextPost = posts[postIndex - 1];
 
-  return { frontmatter, post: { content, excerpt }, previousPost, nextPost };
+  return { frontmatter, post: { content, excerpt, slug }, previousPost, nextPost };
 }
