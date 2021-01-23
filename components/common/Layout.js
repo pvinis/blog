@@ -12,9 +12,17 @@ export function Layout({ children }) {
         <Header />
         <main>{children}</main>
         <footer className="text-lg font-light">
-          © {new Date().getFullYear()}, Built with{" "}
-          <a href="https://nextjs.org/">Next.js</a>
-          &#128293;
+          © {new Date().getFullYear()}, Built by{" "}
+	  <a href="https://twitter.com/pvinis">pvinis</a>{" "}
+	  with 💜 using{" "}
+	  <a href="https://nextjs.org">Next.js</a>
+	  ,{" "}
+	  <a href="https://github.com">GitHub</a>
+	  ,{" "}
+	  <a href="https://netlify.com">Netlify</a>
+	  ,{" "}
+	  <a href="https://cloudflare.com">Cloudflare</a>
+	  .
         </footer>
       </div>
     </div>

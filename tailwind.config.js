@@ -1,3 +1,26 @@
+const defaultSans = [
+  "system-ui",
+  "-apple-system",
+  "BlinkMacSystemFont",
+  '"Segoe UI"',
+  "Roboto",
+  '"Helvetica Neue"',
+  "Arial",
+  '"Noto Sans"',
+  "sans-serif",
+  '"Apple Color Emoji"',
+  '"Segoe UI Emoji"',
+  '"Segoe UI Symbol"',
+  '"Noto Color Emoji"',
+];
+
+const defaultSerif = [
+  "Georgia",
+  "Cambria",
+  '"Times New Roman"',
+  "Times",
+  "serif",
+];
 
 module.exports = {
   purge: {
@@ -13,6 +36,9 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      colors: {
+        "neon-orange": "#f92300",
+      },
       fontSize: {
         "7xl": "4.5rem",
       },
@@ -31,6 +57,9 @@ module.exports = {
             },
             "ul > li::before": {
               backgroundColor: theme("colors.gray.700"),
+            },
+            a: {
+              color: theme("colors.neon-orange"),
             },
           },
         },
@@ -83,6 +112,13 @@ module.exports = {
             },
           },
         },
+      }),
+    },
+    fontFamily: {
+      display: ["Open Sans", ...defaultSans],
+      body: ["Merriweather", ...defaultSerif],
+    },
+  },
   variants: {},
   plugins: [require("@tailwindcss/typography")],
   variants: {
