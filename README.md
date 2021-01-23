@@ -41,3 +41,4 @@ For more information, please check out Tailwind Typography's [customization sect
 
 - add a script to create a new post
 - add scripts to share/distribute my posts to dev.to, medium, whatever
+- add decade eslint

@@ -1,3 +1,4 @@
 - about starting
 - about humans.txt
+- about decade eslint
 - about color naming, lavender, purple royale etc
