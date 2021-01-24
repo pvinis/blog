@@ -15,8 +15,8 @@ In my talk I basically explained how this script that generates the change files
 
 In general, this was a great experience, I enjoyed it a lot and I hope I get invited for another one again!
 
-Link to conference: https://react-native.eu/
+[Link to conference](https://react-native.eu)
 
-Link to videos: https://www.youtube.com/channel/UCbvLih553T7f5OAGTfbsJkQ/videos
+[Link to videos](https://www.youtube.com/channel/UCbvLih553T7f5OAGTfbsJkQ/videos)
 
-Link to photos: https://www.facebook.com/pg/reactnativeeu/photos/?tab=album&album_id=658228464664869
+[Link to photos](https://www.facebook.com/pg/reactnativeeu/photos/?tab=album&album_id=658228464664869)
