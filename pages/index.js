@@ -8,7 +8,7 @@ export default function Home({ posts }) {
     <Layout>
       <SEO title="All posts" />
       <Bio className="my-14" />
-      {posts.filter(({frontmatter: {draft}}) => drart !== "true").map(({ frontmatter: { title, description, date, draft }, slug }) => (
+      {posts.filter(({frontmatter: {draft}}) => draft !== true).map(({ frontmatter: { title, description, date, draft }, slug }) => (
         <article key={slug}>
           <header className="mb-2">
             <h3 className="mb-2">
