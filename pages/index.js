@@ -8,7 +8,9 @@ export default function Home({ posts }) {
     <Layout>
       <SEO title="All posts" />
       <Bio className="my-14" />
-      {posts.map(({ frontmatter: { title, description, date }, slug }) => (
+      {posts.map(({ frontmatter: { title, description, date, draft }, slug }) => {
+      if (draft) return null
+      return (
         <article key={slug}>
           <header className="mb-2">
             <h3 className="mb-2">
@@ -24,7 +26,8 @@ export default function Home({ posts }) {
             <p className="mb-8 text-lg">{description}</p>
           </section>
         </article>
-      ))}
+      )})
+      .filter(x => x === null)}
     </Layout>
   );
 }
