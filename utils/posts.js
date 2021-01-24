@@ -1,5 +1,6 @@
 import matter from "gray-matter";
 import fs from "fs";
+import { draftsFilter } from "./helpers";
 
 export function getPostsFolders() {
   // Get all posts folders located in `content/posts`
@@ -8,9 +9,17 @@ export function getPostsFolders() {
     .map((folderName) => ({
       directory: folderName,
       filename: `${folderName}.md`,
-    }));
+	}))
+	.filter(({ filename, directory }) => {
+		const markdownWithMetadata = fs
+		  .readFileSync(`content/posts/${directory}/${filename}`)
+		  .toString();
+		const { data  } = matter(markdownWithMetadata);
+		const frontmatter = { ...data }
+		return draftsFilter({frontmatter})
+	  })
 
-  return postsFolders;
+	return postsFolders;
 }
 
 // Get day in format: Month day, Year. e.g. April 19, 2020
@@ -49,6 +58,7 @@ export function getSortedPosts() {
         content,
       };
     })
+	.filter(draftsFilter)
     .sort(
       (a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
     );
