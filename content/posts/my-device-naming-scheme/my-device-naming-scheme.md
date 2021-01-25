@@ -13,7 +13,7 @@ I googled and I asked what other friends use. I remember a friend (and a great d
 
 ## Colors!
 
-I'll name my devices with colors. Thats interesting to me, there are definitely a lot of them to now run out soon, and its easy for me to think of a color, and only if I want a very unique color, I can use online help.
+I'll name my devices with colors. Thats interesting to me, there are definitely a lot of them to not run out soon, and its easy for me to think of a color, and only if I want a very unique color, I can use online help.
 
 #### List of names I've used, roughly in order 🤷‍♂, with explanations and my thought process:
 
