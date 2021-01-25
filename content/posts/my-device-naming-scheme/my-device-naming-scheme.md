@@ -71,7 +71,7 @@ I got a nice TV, a Samsung. I saw that I can change the name of it, so I thought
 
 - **lavender**
 
-The next work macbook. This one is close to purple as a color, because I really like that company I'm with. It's subject is art, I enjoy working there a lot, lavender felt like a good combination. lavender.
+The next work macbook. This one is close to purple as a color, because I really like that company I'm with. Its subject is art, I enjoy working there a lot, lavender felt like a good combination. lavender.
 
 - **royal-blanc**
 
