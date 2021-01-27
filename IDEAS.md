@@ -1,3 +1,5 @@
 - about humans.txt
 - about decade eslint
 - ablut my photo profile rainbow
+- bye projexts on jobs
+- pagestripman
