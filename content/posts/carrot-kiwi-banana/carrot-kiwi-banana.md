@@ -15,4 +15,4 @@ These three subjects served as a great conversation starter, or sparked interest
 
 Try it! All you need is a schedule and the three initial presenters. To make it easier, the hosts could also use a Google Slides template that is cloned for every CKB day, and presenters can add their slides in there directly, so that all presentations happen in one machine, for easier transitions (no unplugging or switching machines etc).
 
-If you did try or want to try, I want to know all about it! Hit me up on [Twitter](https://twitter.com/pvinis)
+If you did try or want to try, I want to know all about it! Hit me up on [Twitter](https://twitter.com/pvinis)!
