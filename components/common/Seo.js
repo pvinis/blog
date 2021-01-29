@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import { getSiteMetaData } from "@utils/helpers";
+import { getSiteMetaData } from "@lib/helpers";
 
 export function SEO({ title, description = "" }) {
   const siteMetadata = getSiteMetaData();
@@ -26,6 +26,27 @@ export function SEO({ title, description = "" }) {
       <meta name="twitter:creator" content={siteMetadata.social.twitter} />
       <link rel="icon" type="image/png" href="/static/favicon.ico" />
       <link rel="apple-touch-icon" href="/static/favicon.ico" />
+	  <link
+          key="atom-feed"
+          rel="alternative"
+          type="application/atom+xml"
+          title="Atom feed for pvin.is"
+          href="/feed/atom.xml"
+	  />
+	  <link
+          key="rss-feed"
+          rel="alternative"
+          type="application/rss+xml"
+          title="RSS feed for pvin.is"
+          href="/feed/feed.xml"
+        />
+        <link
+          key="json-feed"
+          rel="alternative"
+          type="application/feed+json"
+          title="JSON feed for pvin.is"
+          href="/feed/feed.json"
+        />
     </Head>
   );
 }

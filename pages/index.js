@@ -1,8 +1,9 @@
 import Link from "next/link";
 
 import { Layout, Bio, SEO } from "@components/common";
-import { getSortedPosts } from "@utils/posts";
-import { draftsFilter } from "@utils/helpers";
+import { getSortedPosts } from "@lib/posts";
+import { draftsFilter } from "@lib/helpers";
+import { buildFeed } from "@lib/feed";
 
 export default function Home({ posts }) {
   return (
@@ -35,9 +36,13 @@ export default function Home({ posts }) {
 export async function getStaticProps() {
   const posts = getSortedPosts();
 
+  await buildFeed()
+
   return {
     props: {
       posts,
     },
   };
 }
+
+

@@ -1,6 +1,6 @@
 import Document, { Head, Main, NextScript, Html } from "next/document";
 
-import { getSiteMetaData } from "@utils/helpers";
+import { getSiteMetaData } from "@lib/helpers";
 
 const GOOGLE_ANALYTICS_ID = 'UA-141718871-1'
 

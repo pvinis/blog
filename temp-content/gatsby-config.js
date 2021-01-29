@@ -10,19 +10,7 @@ module.exports = {
                 head: true,
             },
         },
-        'gatsby-plugin-feed',
-        {
-            resolve: 'gatsby-plugin-manifest',
-            options: {
-                name: 'Purple Royale',
-                short_name: 'pvin.is',
-                start_url: '/',
-                background_color: '#ffffff',
-                theme_color: '#663399',
-                display: 'minimal-ui',
-                icon: 'content/assets/colors-small.png',
-            },
-        },
+// theme_color: '#663399',
         'gatsby-plugin-emotion',
         {
             resolve: 'gatsby-plugin-web-font-loader',

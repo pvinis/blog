@@ -7,7 +7,6 @@ used https://github.com/JoseRFelix/nextjs-starter-blog for template
 
 - Streamlined styling experience with [Tailwind.css](https://tailwindcss.com/).
 - Customizable typographic defaults with [Tailwind Typography](https://github.com/tailwindlabs/tailwindcss-typography)
-- Automatic image preview and optimization with [next-optimized-images](https://github.com/cyrilwanner/next-optimized-images).
 - Markdown code highlighting with [react-syntax-highlighter](https://www.npmjs.com/package/react-syntax-highlighter) and [PrismJs](https://prismjs.com/).
 
 ## 🚀 Getting Started

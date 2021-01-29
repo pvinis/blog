@@ -1,1 +1,5 @@
 .next
+
+public/feed/*
+
+!.gitkeep
