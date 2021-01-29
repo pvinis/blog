@@ -7,11 +7,9 @@ const optimizedImages = require('next-optimized-images');
 	// }
 	// ])
 //
-module.exports = withPlugins([
-	optimizedImages,
-])
 
-	// webpack: (config, { isServer }) => {
+const nextConfig = {
+	webpack: (config, { isServer }) => {
 	  // Fixes npm packages that depend on `fs` module
 	//   if (!isServer) {
 		// config.node = {
@@ -19,6 +17,10 @@ module.exports = withPlugins([
 		// }
 	//   }
 
-	//   return config
-	// }
-	// }
+		return config
+	}
+}
+
+module.exports = withPlugins([
+	[optimizedImages],
+], nextConfig)
