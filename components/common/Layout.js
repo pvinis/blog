@@ -23,6 +23,12 @@ export function Layout({ children }) {
 	  ,{" "}
 	  <a href="https://cloudflare.com">Cloudflare</a>
 	  .
+	  <div>
+	  <p>Feeds</p>
+	  	<a href="/feed/atom.xml">atom</a>
+	  	<a href="/feed/feed.xml">rss</a>
+	  	<a href="/feed/feed.json">json</a>
+	  </div>
         </footer>
       </div>
     </div>
