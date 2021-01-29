@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 import { Layout, Bio, SEO } from "@components/common";
-import { getSortedPosts } from "@utils/posts";
-import { draftsFilter } from "@utils/helpers";
+import { getSortedPosts } from "@lib/posts";
+import { draftsFilter } from "@lib/helpers";
 
 export default function Home({ posts }) {
   return (
@@ -41,3 +41,5 @@ export async function getStaticProps() {
     },
   };
 }
+
+

@@ -1,7 +1,7 @@
 import clsx from "clsx";
 
 import { Image } from "./Image";
-import { getSiteMetaData } from "@utils/helpers";
+import { getSiteMetaData } from "@lib/helpers";
 
 export function Bio({ className }) {
   const { author, social } = getSiteMetaData();

@@ -1,3 +1,17 @@
-const optimizedImages = require("next-optimized-images");
-
-module.exports = optimizedImages;
+	// rewrites: () => ([
+		// {source: "feed/:slug",
+		// destination: '/feed/atom'
+	// }
+	// ])
+module.exports = {
+	// webpack: (config, { isServer }) => {
+	  // Fixes npm packages that depend on `fs` module
+	//   if (!isServer) {
+		// config.node = {
+		//   fs: 'empty'
+		// }
+	//   }
+//
+	//   return config
+	// }
+	}
