@@ -33,6 +33,20 @@ export function SEO({ title, description = "" }) {
           title="Atom feed for pvin.is"
           href="/feed/atom.xml"
 	  />
+	  <link
+          key="rss-feed"
+          rel="alternative"
+          type="application/rss+xml"
+          title="RSS feed for pvin.is"
+          href="/feed/feed.xml"
+        />
+        <link
+          key="json-feed"
+          rel="alternative"
+          type="application/feed+json"
+          title="JSON feed for pvin.is"
+          href="/feed/feed.json"
+        />
     </Head>
   );
 }
