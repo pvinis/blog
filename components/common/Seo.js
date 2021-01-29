@@ -26,6 +26,13 @@ export function SEO({ title, description = "" }) {
       <meta name="twitter:creator" content={siteMetadata.social.twitter} />
       <link rel="icon" type="image/png" href="/static/favicon.ico" />
       <link rel="apple-touch-icon" href="/static/favicon.ico" />
+	  <link
+          key="atom-feed"
+          rel="alternative"
+          type="application/atom+xml"
+          title="Atom feed for pvin.is"
+          href="/feed/atom.xml"
+	  />
     </Head>
   );
 }
