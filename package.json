@@ -33,7 +33,7 @@
     "autoprefixer": "10.2.4",
     "gray-matter": "4.0.2",
     "postcss": "8.2.5",
-    "tailwindcss": "2.0.2"
+    "tailwindcss": "2.0.3"
   },
   "license": "MIT",
   "homepage": "https://pvin.is",
