@@ -7,7 +7,7 @@ Every now and then I want to know if I own a game already or if I need to buy it
 
 Finally this morning I made a thing for me, so I can do exactly that!
 
-https://observablehq.com/@pvinis/my-games
+[https://observablehq.com/@pvinis/my-games](https://observablehq.com/@pvinis/my-games)
 
 I can type something in the searchbox and I'll get a result, with the store I own it on.
 
