@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import { useTheme } from "next-themes";
+import { pageview} from "@lib/gtag"
+
 
 export function Layout({ children }) {
   return (
@@ -37,11 +39,22 @@ export function Layout({ children }) {
 
 const Header = () => {
   const { setTheme, resolvedTheme } = useTheme();
-  const { pathname } = useRouter();
+  const { pathname, events } = useRouter();
   const [mounted, setMounted] = useState(false);
-
+ 
   useEffect(() => setMounted(true), []);
 
+  useEffect(() => {
+	  const handleRouteChange = (url: URL) => {
+	  pageview(url)
+	  }
+	  
+	  events.on("routeChangeComplete", handleRouteChange)
+	  return () => {
+	  	events.off("routeChangeComplete", handleRouteChange)
+	  }
+  }, [events])
+	
   const toggleDarkMode = (checked) => {
     const isDarkMode = checked;
 
