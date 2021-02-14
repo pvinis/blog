@@ -10,3 +10,5 @@
   environment = { NODE_VERSION = "12.13.1" }
 
 
+[[plugins]]
+package = "netlify-plugin-cache-nextjs"
