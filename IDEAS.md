@@ -5,3 +5,4 @@
 - pagestripman
 - considered the gadget man
 - dock not on the bottom. put it left or right
+- morning standup sucks. standup in general
