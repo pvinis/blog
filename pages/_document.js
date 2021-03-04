@@ -1,8 +1,8 @@
 import Document, { Head, Main, NextScript, Html } from "next/document";
 
-import { getSiteMetaData } from "@lib/helpers";
+import { getSiteMetaData } from "@lib/helpers"
+import { GOOGLE_ANALYTICS_ID } from "@lib/gtag"
 
-const GOOGLE_ANALYTICS_ID = 'UA-141718871-1'
 
 export default class MyDocument extends Document {
   render() {
@@ -11,12 +11,24 @@ export default class MyDocument extends Document {
     return (
       <Html lang={siteMetadata.language}>
         <Head>
-		<script
+	    <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_ID}`}
+          />
+<script
             dangerouslySetInnerHTML={{
-              __html: `${GOOGLE_ANALYTICS_ID}`
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${GOOGLE_ANALYTICS_ID}', {
+                page_path: window.location.pathname,
+              });
+          `
             }}
           />
-		</Head>
+
+	</Head>
         <body>
           <Main />
           <NextScript />
