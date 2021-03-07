@@ -6,3 +6,4 @@
 - considered the gadget man
 - dock not on the bottom. put it left or right
 - morning standup sucks. standup in general
+- joke urls like https://pavlos.pizza/ and mortalkombat and japangang and neko etc
