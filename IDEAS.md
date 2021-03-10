@@ -7,3 +7,4 @@
 - dock not on the bottom. put it left or right
 - morning standup sucks. standup in general
 - joke urls like https://pavlos.pizza/ and mortalkombat and japangang and neko etc
+- about the git investigation https://github.com/facebook/react-native/pull/31128
