@@ -34,7 +34,7 @@
     "gray-matter": "4.0.2",
     "netlify-plugin-cache-nextjs": "1.5.2",
     "postcss": "8.2.8",
-    "tailwindcss": "2.0.3"
+    "tailwindcss": "2.0.4"
   },
   "license": "MIT",
   "homepage": "https://pvin.is",
