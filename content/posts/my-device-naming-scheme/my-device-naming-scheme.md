@@ -89,7 +89,15 @@ Similar to royal-blanc but not really. I got a second ipad from my brother. Stic
 
 I got a gaming laptop to be able to play and talk with friends while I'm away from home. It was an unexpected buy, but one that definitely was a good one. It's windows, which I like slightly less than mac, it's a lenovo, which I like less than macbooks. So I looked for a less great color. To me that was green. green was free since I had left the company that gave me that macbook before, but still I didn't want to reuse. green was that one. This should have another name. I googled for shades of green, and there it was. A funny silly name for a shade of green, perfect for that laptop! hookers-green.
 
-My **current devices** are royal-blanc, royal-purple, lavender, maroon, the-pink (when I'm home), hookers-green (when I'm not home), wh1te, samblue.
+- **yellow**
+
+I decided to name the linode server I have to yellow. It's in Europe this time, but the color has nothing to do with that. Just a color that will not be used for any of my main daily devices, so I might as well use it there. yellow.
+
+- **neon-orange**
+
+I got a Synology to use as an extra backup thing and some other uses. So you know that neon orange vest that workers wear, so you can spot them from afar and in the dark? That's what this NAS is doing. It's a worker, backing up, doing things for the betterment of my data. And I need to acknowledge that. neon-green.
+
+My **current devices** are royal-blanc, royal-purple, lavender, maroon, the-pink (when I'm home), hookers-green (when I'm not home), wh1te, samblue, yellow, neon-orange.
 
 ### Wow
 
