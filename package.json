@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "0.4.1",
-    "autoprefixer": "10.2.6",
+    "autoprefixer": "10.3.5",
     "gray-matter": "4.0.3",
     "netlify-plugin-cache-nextjs": "1.5.2",
     "postcss": "8.2.15",
