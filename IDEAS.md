@@ -11,3 +11,5 @@
 - about the spotify controls with skhd and keyboard and .bin script
 - are wifi passwords the only collection thats not hoarding? you never need to remove them.
 - dark mode for Firefox, zsh, vscode, hook on macos
+- precommit hooks blogpost
+- 
