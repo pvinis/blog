@@ -97,7 +97,20 @@ I decided to name the linode server I have to yellow. It's in Europe this time, 
 
 I got a Synology to use as an extra backup thing and some other uses. So you know that neon orange vest that workers wear, so you can spot them from afar and in the dark? That's what this NAS is doing. It's a worker, backing up, doing things for the betterment of my data. And I need to acknowledge that. neon-green.
 
-My **current devices** are royal-blanc, royal-purple, lavender, maroon, the-pink (when I'm home), hookers-green (when I'm not home), wh1te, samblue, yellow, neon-orange.
+- **gray**
+
+I got an Android phone as a second/travel phone, not wasting my iPhone's battery etc! I decided to call it gray, because its kinda gray anyway, but also Android feels kinda bland but also customizable, so it feels not like a blank canvas exactly, but kinda. So gray.
+
+- **mauve**
+
+My current phone. Gotta stick with my favorite color shades, so this one is mauve. Simple as that.
+
+- **emerald**
+
+My new work macbook. This one is related to money so I wnated something gem-y, green, which naturally came to emerald.
+
+
+My **current devices** are mauve, royal-purple, emerald, maroon, the-pink (when I'm home), hookers-green (when I'm not home), wh1te, samblue, yellow, neon-orange.
 
 ### Wow
 
