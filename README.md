@@ -2,7 +2,7 @@
 
 > by Pavlos Vinieratos
 
-### 🔗 [blog.pvinis.com](https://blog.pav.vin)
+### 🔗 [pvinis.com](https://pvinis.com)
 
 My personal blog.
 

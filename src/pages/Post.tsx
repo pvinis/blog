@@ -25,6 +25,7 @@ export function Post({ slug }: PostProps) {
 
 	const { attributes } = fm<SupportedFrontMatter>(text)
 
+	const description = attributes.description ?? `Post: ${attributes.title}`
 	const favicon = attributes.favicon
 		? attributes.favicon
 		: attributes.faviconEmoji
@@ -35,12 +36,11 @@ export function Post({ slug }: PostProps) {
 		<>
 			<Helmet>
 				{attributes.title && <title>{attributes.title}</title>}
-				{attributes.description && <meta name="description" content={attributes.description} />}
+				{<meta name="description" content={description} />}
 				{favicon && <link rel="icon" href={favicon} />}
 				{/* {favicon && <link rel="icon" href={favicon} media="(prefers-color-scheme: light)" />} */}
 				{/* {favicon && <link rel="icon" href={favicon} media="(prefers-color-scheme: dark)" />} */}
 			</Helmet>
-
 			<MDRenderer text={text} />
 		</>
 	)

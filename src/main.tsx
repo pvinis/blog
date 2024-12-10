@@ -8,7 +8,7 @@ import { Post } from "./pages/Post"
 createRoot(document.getElementById("root")!).render(
 	<StrictMode>
 		<Providers>
-			<div className="prose prose-quoteless mx-auto max-w-prose bg-background px-6 pb-16 pt-32 lg:prose-xl dark:prose-invert prose-blockquote:font-normal prose-blockquote:text-gray-400 2xl:max-w-[1000px]">
+			<div className="prose prose-quoteless bg-background lg:prose-xl dark:prose-invert prose-blockquote:font-normal prose-blockquote:text-gray-400 mx-auto max-w-prose px-6 pt-32 pb-16 2xl:max-w-[1000px]">
 				<Route path="/">
 					<div>Hello</div>
 					<Link href="/posts/2024-12-10-december-challenge-4">December Challenge #4</Link>

@@ -1,6 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 :root {
 	--color-background: white;
@@ -16,8 +15,19 @@
 	}
 }
 
-@layer base {
-	html {
-		@apply bg-background;
+@theme {
+	--color-background: var(--color-background);
+	--color-on-background: var(--color-on-background);
+	--color-accent: var(--color-accent);
+}
+
+@layer utilities {
+	.prose-quoteless {
+		blockquote p:first-of-type::before {
+			content: none;
+		}
+		blockquote p:first-of-type::after {
+			content: none;
+		}
 	}
 }
