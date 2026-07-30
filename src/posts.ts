@@ -23,12 +23,18 @@ function toPost(path: string, raw: string): Post {
 	return { slug, date: new Date(attributes.date), body, attributes }
 }
 
-export const posts: Post[] = Object.entries(files)
+const allPosts: Post[] = Object.entries(files)
 	.map(([path, raw]) => toPost(path, raw))
 	.sort((a, b) => b.date.getTime() - a.date.getTime())
 
+// what the home page lists. drafts stay reachable at their own url, they just
+// do not get advertised. still listed in dev so you can find the thing you are
+// in the middle of writing.
+export const posts: Post[] = allPosts.filter((post) => import.meta.env.DEV || !post.attributes.draft)
+
+// any post by slug, drafts included, so a draft url keeps working in production.
 export function getPost(slug: string): Post | undefined {
-	return posts.find((post) => post.slug === slug)
+	return allPosts.find((post) => post.slug === slug)
 }
 
 // UTC, otherwise a late-evening timestamp like init-commit's 22:41Z renders as
