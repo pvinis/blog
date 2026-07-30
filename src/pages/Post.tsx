@@ -1,8 +1,6 @@
 import { Link } from "wouter"
 import { MDRenderer } from "../components/MDRenderer"
 import { getPost, formatDate } from "../posts"
-import { site } from "../config"
-import { Seo } from "../components/Seo"
 import { NotFound } from "./NotFound"
 
 interface PostProps {
@@ -15,23 +13,9 @@ export function Post({ slug }: PostProps) {
 	if (!post) return <NotFound />
 
 	const { attributes } = post
-	const description = attributes.description ?? `Post: ${attributes.title}`
-	const favicon = attributes.favicon
-		? attributes.favicon
-		: attributes.faviconEmoji
-			? `data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>${attributes.faviconEmoji}</text></svg>`
-			: undefined
 
 	return (
 		<>
-			<Seo
-				title={`${attributes.title} - ${site.name}`}
-				description={description}
-				path={`/posts/${post.slug}`}
-				favicon={favicon}
-				article={{ publishedAt: post.date }}
-			/>
-
 			<h1 className="mb-1">
 				{attributes.draft && <span className="mr-2 opacity-60">[draft]</span>}
 				{attributes.title}

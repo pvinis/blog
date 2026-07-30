@@ -6,27 +6,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-	<!--
-		static defaults, read by link unfurlers and crawlers that do not run js.
-		once react boots, main.tsx strips everything tagged data-static-meta and
-		helmet owns the head, so these never duplicate the per-page tags.
-	-->
-	<title data-static-meta>Purple Royale - Blog of Pavlos</title>
-	<meta data-static-meta name="description"
-		content="The website and blog of Pavlos, where he writes about code and codes about stuff." />
-	<link data-static-meta rel="canonical" href="https://pvin.is/" />
-	<meta data-static-meta property="og:type" content="website" />
-	<meta data-static-meta property="og:site_name" content="Purple Royale" />
-	<meta data-static-meta property="og:title" content="Purple Royale - Blog of Pavlos" />
-	<meta data-static-meta property="og:description"
-		content="The website and blog of Pavlos, where he writes about code and codes about stuff." />
-	<meta data-static-meta property="og:url" content="https://pvin.is/" />
-	<meta data-static-meta name="twitter:card" content="summary" />
-	<meta data-static-meta name="twitter:creator" content="@pvinis" />
+	<link rel="alternate" type="application/rss+xml" title="Purple Royale" href="/feed/feed.xml" />
+	<link rel="alternate" type="application/atom+xml" title="Purple Royale" href="/feed/atom.xml" />
+	<link rel="alternate" type="application/feed+json" title="Purple Royale" href="/feed/feed.json" />
+
+	<!-- prerender injects the real per-page title, description, canonical and og tags here -->
+	<!--app-head-->
 </head>
 
 <body class="bg-background">
-	<div id="root"></div>
+	<div id="root"><!--app-html--></div>
 	<script type="module" src="/src/main.tsx"></script>
 </body>
 

@@ -23,7 +23,9 @@ function toPost(path: string, raw: string): Post {
 	return { slug, date: new Date(attributes.date), body, attributes }
 }
 
-const allPosts: Post[] = Object.entries(files)
+// everything, drafts included. the prerender step needs this so draft urls get
+// a real html file too.
+export const allPosts: Post[] = Object.entries(files)
 	.map(([path, raw]) => toPost(path, raw))
 	.sort((a, b) => b.date.getTime() - a.date.getTime())
 
