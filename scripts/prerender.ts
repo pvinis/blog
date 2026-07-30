@@ -30,7 +30,10 @@ async function writeFileAt(relativePath: string, contents: string) {
 async function prerender(url: string, outPath: string) {
 	const { html, head } = render(url)
 
-	const page = template.replace("<!--app-head-->", head).replace("<!--app-html-->", html)
+	const page = template
+		.replace('<html lang="en">', `<html lang="${site.language}">`)
+		.replace("<!--app-head-->", head)
+		.replace("<!--app-html-->", html)
 
 	await writeFileAt(outPath, page)
 	return page

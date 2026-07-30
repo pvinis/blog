@@ -6,7 +6,7 @@ import profile from "../assets/profile.png"
 export function Home() {
 	return (
 		<>
-			<h1 className="mb-2">{site.name}</h1>
+			<h1 className="mb-2">{site.title}</h1>
 
 			<div className="mb-14 flex items-center gap-3 not-prose">
 				<img src={profile} alt="" className="h-14 w-14 shrink-0 rounded-full" />
