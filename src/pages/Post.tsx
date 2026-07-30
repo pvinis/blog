@@ -1,30 +1,20 @@
 import { Helmet } from "react-helmet-async"
+import { Link } from "wouter"
 import { MDRenderer } from "../components/MDRenderer"
-import { useEffect, useState } from "react"
-import { SupportedFrontMatter } from "../types"
-import fm from "front-matter"
+import { getPost, formatDate } from "../posts"
+import { site } from "../config"
+import { NotFound } from "./NotFound"
 
 interface PostProps {
 	slug: string
 }
 
 export function Post({ slug }: PostProps) {
-	const [text, setText] = useState<string | null>(null)
+	const post = getPost(slug)
 
-	useEffect(() => {
-		const fetchPost = async () => {
-			const file = `/posts/${slug}.md`
-			const res = await fetch(file)
-			const content = await res.text()
-			setText(content)
-		}
-		fetchPost()
-	}, [slug])
+	if (!post) return <NotFound />
 
-	if (!text) return null
-
-	const { attributes } = fm<SupportedFrontMatter>(text)
-
+	const { attributes } = post
 	const description = attributes.description ?? `Post: ${attributes.title}`
 	const favicon = attributes.favicon
 		? attributes.favicon
@@ -35,13 +25,23 @@ export function Post({ slug }: PostProps) {
 	return (
 		<>
 			<Helmet>
-				{attributes.title && <title>{attributes.title}</title>}
-				{<meta name="description" content={description} />}
+				<title>{`${attributes.title} - ${site.name}`}</title>
+				<meta name="description" content={description} />
 				{favicon && <link rel="icon" href={favicon} />}
-				{/* {favicon && <link rel="icon" href={favicon} media="(prefers-color-scheme: light)" />} */}
-				{/* {favicon && <link rel="icon" href={favicon} media="(prefers-color-scheme: dark)" />} */}
 			</Helmet>
-			<MDRenderer text={text} />
+
+			<h1 className="mb-1">
+				{attributes.draft && <span className="mr-2 opacity-60">[draft]</span>}
+				{attributes.title}
+			</h1>
+			<p className="mt-0 mb-10 text-sm opacity-70">{formatDate(post.date)}</p>
+
+			<MDRenderer text={post.body} />
+
+			<hr className="mt-14" />
+			<Link href="/" className="text-accent no-underline hover:underline">
+				back to all posts
+			</Link>
 		</>
 	)
 }

@@ -1,5 +1,6 @@
 ---
 title: "December Challenge #4"
+date: 2024-12-10T00:00:00.000Z
 faviconEmoji: "🎄"
 tags: ["december challenge"]
 ---
