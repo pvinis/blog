@@ -4,12 +4,25 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Purple Royale - Blog of Pavlos</title>
-	<meta name="description"
-		content="The website and blog of Pavlos, where he writes about code and codes about stuff." data-rh="true" />
-	<link rel="icon" type="image/svg+xml" href="/favicon.svg" data-rh="true" />
-	<!-- <link rel="icon" type="image/png" href="/icon-light.png" media="(prefers-color-scheme: light)" data-rh="true" /> -->
-	<!-- <link rel="icon" type="image/png" href="/icon-dark.png" media="(prefers-color-scheme: dark)" data-rh="true" /> -->
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+	<!--
+		static defaults, read by link unfurlers and crawlers that do not run js.
+		once react boots, main.tsx strips everything tagged data-static-meta and
+		helmet owns the head, so these never duplicate the per-page tags.
+	-->
+	<title data-static-meta>Purple Royale - Blog of Pavlos</title>
+	<meta data-static-meta name="description"
+		content="The website and blog of Pavlos, where he writes about code and codes about stuff." />
+	<link data-static-meta rel="canonical" href="https://pvin.is/" />
+	<meta data-static-meta property="og:type" content="website" />
+	<meta data-static-meta property="og:site_name" content="Purple Royale" />
+	<meta data-static-meta property="og:title" content="Purple Royale - Blog of Pavlos" />
+	<meta data-static-meta property="og:description"
+		content="The website and blog of Pavlos, where he writes about code and codes about stuff." />
+	<meta data-static-meta property="og:url" content="https://pvin.is/" />
+	<meta data-static-meta name="twitter:card" content="summary" />
+	<meta data-static-meta name="twitter:creator" content="@pvinis" />
 </head>
 
 <body class="bg-background">

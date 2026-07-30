@@ -7,6 +7,12 @@ import { Home } from "./pages/Home"
 import { Post } from "./pages/Post"
 import { NotFound } from "./pages/NotFound"
 
+// index.html ships static title/og/canonical defaults for link unfurlers and
+// crawlers that do not run js. helmet appends rather than replacing them, which
+// left the head with two titles and two canonicals, so drop them here and let
+// helmet own it from this point on.
+document.head.querySelectorAll("[data-static-meta]").forEach((el) => el.remove())
+
 createRoot(document.getElementById("root")!).render(
 	<StrictMode>
 		<Providers>

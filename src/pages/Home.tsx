@@ -1,16 +1,13 @@
-import { Helmet } from "react-helmet-async"
 import { Link } from "wouter"
 import { posts, formatDate } from "../posts"
 import { site } from "../config"
+import { Seo } from "../components/Seo"
 import profile from "../assets/profile.png"
 
 export function Home() {
 	return (
 		<>
-			<Helmet>
-				<title>{site.title}</title>
-				<meta name="description" content={site.description} />
-			</Helmet>
+			<Seo title={site.title} description={site.description} path="/" />
 
 			<h1 className="mb-2">{site.name}</h1>
 

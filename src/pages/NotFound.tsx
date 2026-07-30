@@ -1,14 +1,11 @@
-import { Helmet } from "react-helmet-async"
 import { Link } from "wouter"
 import { site } from "../config"
+import { Seo } from "../components/Seo"
 
 export function NotFound() {
 	return (
 		<>
-			<Helmet>
-				<title>{`4 oh 4 - ${site.name}`}</title>
-				<meta name="description" content="Page not found" />
-			</Helmet>
+			<Seo title={`4 oh 4 - ${site.name}`} description="Page not found" path="/404" />
 
 			<h1>404</h1>
 			<p>Nothing here.</p>
