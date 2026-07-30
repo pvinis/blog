@@ -10,30 +10,26 @@
   },
   "dependencies": {
     "front-matter": "^4.0.2",
-    "posthog-js": "^1.195.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-helmet-async": "^2.0.5",
-    "react-markdown": "^9.0.1",
-    "react-spinners": "^0.15.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-helmet-async": "^3.0.0",
+    "react-markdown": "^10.1.0",
     "rehype-raw": "^7.0.0",
     "remark-frontmatter": "^5.0.0",
-    "remark-gfm": "^4.0.0",
-    "wouter": "^3.3.5",
-    "zod": "^3.24.0"
+    "remark-gfm": "^4.0.1",
+    "wouter": "^3.10.0"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.15",
-    "@tailwindcss/vite": "^4.0.0-beta.6",
-    "@types/react": "^18.3.15",
-    "@types/react-dom": "^18.3.3",
-    "@vitejs/plugin-react": "^4.3.4",
-    "globals": "^15.13.0",
-    "prettier": "^3.4.2",
-    "prettier-plugin-tailwindcss": "^0.6.9",
-    "tailwindcss": "^4.0.0-beta.6",
-    "typescript": "^5.7.2",
-    "vite": "^6.0.3"
+    "@tailwindcss/typography": "^0.5.20",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.5",
+    "prettier": "^3.9.6",
+    "prettier-plugin-tailwindcss": "^0.8.1",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.0"
   },
   "trustedDependencies": [
     "core-js"
