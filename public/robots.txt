@@ -1,2 +1,6 @@
 User-agent: *
 Allow: /
+
+//// add rss
+//// add list of posts
+/// add og:title stuff
