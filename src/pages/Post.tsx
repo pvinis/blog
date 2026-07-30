@@ -1,8 +1,8 @@
-import { Helmet } from "react-helmet-async"
 import { Link } from "wouter"
 import { MDRenderer } from "../components/MDRenderer"
 import { getPost, formatDate } from "../posts"
 import { site } from "../config"
+import { Seo } from "../components/Seo"
 import { NotFound } from "./NotFound"
 
 interface PostProps {
@@ -24,11 +24,13 @@ export function Post({ slug }: PostProps) {
 
 	return (
 		<>
-			<Helmet>
-				<title>{`${attributes.title} - ${site.name}`}</title>
-				<meta name="description" content={description} />
-				{favicon && <link rel="icon" href={favicon} />}
-			</Helmet>
+			<Seo
+				title={`${attributes.title} - ${site.name}`}
+				description={description}
+				path={`/posts/${post.slug}`}
+				favicon={favicon}
+				article={{ publishedAt: post.date }}
+			/>
 
 			<h1 className="mb-1">
 				{attributes.draft && <span className="mr-2 opacity-60">[draft]</span>}
