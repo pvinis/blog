@@ -1,5 +1,5 @@
 export const site = {
-	title: "Purple Royale - Blog of Pavlos",
+	title: "Purple Royale · Blog of Pavlos",
 	name: "Purple Royale",
 	description: "The website and blog of Pavlos, where he writes about code and codes about stuff.",
 	url: "https://pvin.is",
