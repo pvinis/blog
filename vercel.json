@@ -1,4 +1,5 @@
 {
-	"redirects": [{ "source": "/post/:slug", "destination": "/posts/:slug", "permanent": true }],
-	"rewrites": [{ "source": "/(.*)", "destination": "/" }]
+	"trailingSlash": false,
+	"cleanUrls": true,
+	"redirects": [{ "source": "/post/:slug", "destination": "/posts/:slug", "permanent": true }]
 }

@@ -1,14 +1,11 @@
 import { Link } from "wouter"
 import { posts, formatDate } from "../posts"
 import { site } from "../config"
-import { Seo } from "../components/Seo"
 import profile from "../assets/profile.png"
 
 export function Home() {
 	return (
 		<>
-			<Seo title={site.title} description={site.description} path="/" />
-
 			<h1 className="mb-2">{site.name}</h1>
 
 			<div className="mb-14 flex items-center gap-3 not-prose">
