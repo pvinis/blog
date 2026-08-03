@@ -1,5 +1,5 @@
 import { Link } from "wouter"
-import { posts, formatDate, externalHost } from "../posts"
+import { posts, formatDate } from "../posts"
 import { site } from "../config"
 import profile from "../assets/profile.png"
 
@@ -42,20 +42,7 @@ export function Home() {
 								</Link>
 							)}
 						</h2>
-						<span className="text-sm opacity-70">
-							{external ? (
-								// the title leaves the site, so the date carries the local permalink.
-								// without it that page would only be reachable from the feeds.
-								<>
-									<Link href={permalink} className="text-inherit no-underline hover:underline">
-										{formatDate(post.date)}
-									</Link>{" "}
-									· {externalHost(external)}
-								</>
-							) : (
-								formatDate(post.date)
-							)}
-						</span>
+						<span className="text-sm opacity-70">{formatDate(post.date)}</span>
 						{description && <p className="mt-2">{description}</p>}
 					</article>
 				)

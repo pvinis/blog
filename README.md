@@ -36,7 +36,7 @@ post body here
 
 Only `title` and `date` are required. `draft: true` badges the post `[draft]` but still publishes it. Posts are sorted newest first and dates render in UTC.
 
-`external` turns the entry into a link post, for something published on another site. The index links the title straight there with a `↗` and shows the host next to the date, while the date itself still links to the local page, which keeps your own blurb plus a pointer to the original. Feeds send readers to the other site too, but keep this site's url as the item id, so nothing looks like a repost. The canonical url stays ours, since a paragraph of context is not a duplicate of the article it points at.
+`external` turns the entry into a link post, for something published on another site. On the index the title links straight there, marked with a `↗`, and nothing else about the row changes. The post still has a page here, holding your own blurb plus a pointer to the original, but nothing on the index links to it, so reach it through the feeds or the url. Feeds send readers to the other site too, but keep this site's url as the item id, so nothing looks like a repost. The canonical url stays ours, since a paragraph of context is not a duplicate of the article it points at.
 
 There is no index to update. `src/posts.ts` picks up the folder with `import.meta.glob`, which vite resolves at build time.
 
