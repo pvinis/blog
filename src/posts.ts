@@ -39,6 +39,12 @@ export function getPost(slug: string): Post | undefined {
 	return allPosts.find((post) => post.slug === slug)
 }
 
+// where a link post actually points, for the "· artsy.github.io" line on the
+// index. the host alone is enough to tell a reader they are leaving.
+export function externalHost(url: string): string {
+	return new URL(url).hostname.replace(/^www\./, "")
+}
+
 // UTC, otherwise a late-evening timestamp like init-commit's 22:41Z renders as
 // the next day for anyone east of greenwich.
 export function formatDate(date: Date): string {

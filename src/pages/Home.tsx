@@ -1,5 +1,5 @@
 import { Link } from "wouter"
-import { posts, formatDate } from "../posts"
+import { posts, formatDate, externalHost } from "../posts"
 import { site } from "../config"
 import profile from "../assets/profile.png"
 
@@ -16,18 +16,50 @@ export function Home() {
 				</p>
 			</div>
 
-			{posts.map((post) => (
-				<article key={post.slug} className="mb-10">
-					<h2 className="mb-1">
-						<Link href={`/posts/${post.slug}`} className="text-accent no-underline hover:underline">
-							{post.attributes.draft && <span className="mr-2 opacity-60">[draft]</span>}
-							{post.attributes.title}
-						</Link>
-					</h2>
-					<span className="text-sm opacity-70">{formatDate(post.date)}</span>
-					{post.attributes.description && <p className="mt-2">{post.attributes.description}</p>}
-				</article>
-			))}
+			{posts.map((post) => {
+				const { title, description, draft, external } = post.attributes
+				const permalink = `/posts/${post.slug}`
+
+				// built once, so the badge and title are not spelled out in both branches below.
+				const heading = (
+					<>
+						{draft && <span className="mr-2 opacity-60">[draft]</span>}
+						{title}
+						{external && <span aria-hidden> ↗</span>}
+					</>
+				)
+
+				return (
+					<article key={post.slug} className="mb-10">
+						<h2 className="mb-1">
+							{external ? (
+								<a href={external} className="text-accent no-underline hover:underline">
+									{heading}
+								</a>
+							) : (
+								<Link href={permalink} className="text-accent no-underline hover:underline">
+									{heading}
+								</Link>
+							)}
+						</h2>
+						<span className="text-sm opacity-70">
+							{external ? (
+								// the title leaves the site, so the date carries the local permalink.
+								// without it that page would only be reachable from the feeds.
+								<>
+									<Link href={permalink} className="text-inherit no-underline hover:underline">
+										{formatDate(post.date)}
+									</Link>{" "}
+									· {externalHost(external)}
+								</>
+							) : (
+								formatDate(post.date)
+							)}
+						</span>
+						{description && <p className="mt-2">{description}</p>}
+					</article>
+				)
+			})}
 		</>
 	)
 }
