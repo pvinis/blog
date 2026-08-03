@@ -1,7 +1,6 @@
 ---
 title: TypeScript magic
 date: 2023-03-01T00:00:00.000Z
-description: "The string & {} trick, which keeps autocomplete on a union while still accepting any string."
 tags: ["elsewhere"]
 external: https://artsy.github.io/blog/2023/03/01/typescript-magic/
 ---
