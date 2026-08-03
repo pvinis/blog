@@ -31,10 +31,11 @@ export function Home() {
 
 				return (
 					<article key={post.slug} className="mb-10">
-						{/* mb-1! because lg:prose-xl sets its own h2 margin-bottom, and at the same
-						    specificity it is written later in the sheet, so a plain mb-1 loses from
-						    lg up and the date drifts 32px away from its title. */}
-						<h2 className="mb-1!">
+						{/* the lg:mb-1 is not a typo. prose sets its own h2 margin-bottom, and
+						    lg:prose-xl sets it again at the same specificity but later in the
+						    sheet, so a lone mb-1 loses from lg up and the date drifts away from
+						    its title. repeating it at lg puts it back after both. */}
+						<h2 className="mb-1 lg:mb-1">
 							{external ? (
 								<a href={external} className="text-accent no-underline hover:underline">
 									{heading}
