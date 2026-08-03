@@ -6,4 +6,6 @@ export type SupportedFrontMatter = {
 	description?: string
 	tags?: string[]
 	draft?: boolean
+	/** set when the post really lives on another site. the index links straight there. */
+	external?: string
 }

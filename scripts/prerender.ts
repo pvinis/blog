@@ -30,7 +30,10 @@ async function writeFileAt(relativePath: string, contents: string) {
 async function prerender(url: string, outPath: string) {
 	const { html, head } = render(url)
 
-	const page = template.replace("<!--app-head-->", head).replace("<!--app-html-->", html)
+	const page = template
+		.replace('<html lang="en">', `<html lang="${site.language}">`)
+		.replace("<!--app-head-->", head)
+		.replace("<!--app-html-->", html)
 
 	await writeFileAt(outPath, page)
 	return page
@@ -53,6 +56,11 @@ function cdata(value: string): string {
 const url = (path: string) => `${site.url}${path}`
 const postUrl = (post: Post) => url(`/posts/${post.slug}`)
 const summary = (post: Post) => post.attributes.description ?? `Post: ${post.attributes.title}`
+
+// a link post points at someone else's site, so that is where the feed item
+// sends people. the id/guid stays our own permalink, so a reader who already
+// has the item does not see it again as something new.
+const linkFor = (post: Post) => post.attributes.external ?? postUrl(post)
 
 // ---------------------------------------------------------------- pages
 
@@ -112,8 +120,8 @@ ${entries
 	.map(
 		({ post, html }) => `		<item>
 			<title>${escapeXml(post.attributes.title)}</title>
-			<link>${escapeXml(postUrl(post))}</link>
-			<guid isPermaLink="true">${escapeXml(postUrl(post))}</guid>
+			<link>${escapeXml(linkFor(post))}</link>
+			<guid isPermaLink="${post.attributes.external ? "false" : "true"}">${escapeXml(postUrl(post))}</guid>
 			<pubDate>${post.date.toUTCString()}</pubDate>
 			<description>${escapeXml(summary(post))}</description>
 			<content:encoded xmlns:content="http://purl.org/rss/1.0/modules/content/">${cdata(html)}</content:encoded>
@@ -140,7 +148,7 @@ ${entries
 		({ post, html }) => `	<entry>
 		<title>${escapeXml(post.attributes.title)}</title>
 		<id>${escapeXml(postUrl(post))}</id>
-		<link href="${escapeXml(postUrl(post))}" />
+		<link href="${escapeXml(linkFor(post))}" />
 		<updated>${post.date.toISOString()}</updated>
 		<published>${post.date.toISOString()}</published>
 		<summary>${escapeXml(summary(post))}</summary>
@@ -162,6 +170,8 @@ const jsonFeed = {
 	items: entries.map(({ post, html }) => ({
 		id: postUrl(post),
 		url: postUrl(post),
+		// json feed 1.1 has a field for exactly this. left out entirely on normal posts.
+		...(post.attributes.external ? { external_url: post.attributes.external } : {}),
 		title: post.attributes.title,
 		summary: summary(post),
 		content_html: html,
