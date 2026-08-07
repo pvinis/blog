@@ -12,7 +12,8 @@ export function Home() {
 				<img src={profile} alt="" className="h-14 w-14 shrink-0 rounded-full" />
 				<p className="text-on-background text-base leading-7">
 					Written by <b className="font-semibold">{site.author.name}</b> {site.author.summary}{" "}
-					<a href={`https://github.com/${site.social.github}`}>You can find him on github</a>.
+					<a href={`https://github.com/${site.social.github}`}>You can find him on github</a>, or see
+					what he has <Link href="/projects">worked on</Link>.
 				</p>
 			</div>
 

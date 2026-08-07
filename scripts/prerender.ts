@@ -69,6 +69,7 @@ const linkFor = (post: Post) => post.attributes.external ?? postUrl(post)
 // feeds below.
 const routes = [
 	{ url: "/", out: "index.html" },
+	{ url: "/projects", out: "projects.html" },
 	...allPosts.map((post: Post) => ({ url: `/posts/${post.slug}`, out: `posts/${post.slug}.html` })),
 ]
 
@@ -88,6 +89,10 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 	<url>
 		<loc>${escapeXml(site.url)}</loc>
 		<changefreq>weekly</changefreq>
+	</url>
+	<url>
+		<loc>${escapeXml(url("/projects"))}</loc>
+		<changefreq>monthly</changefreq>
 	</url>
 ${posts
 	.map(
@@ -185,6 +190,6 @@ await writeFileAt("feed/atom.xml", atom)
 await writeFileAt("feed/feed.json", `${JSON.stringify(jsonFeed, null, 2)}\n`)
 
 console.log(
-	`prerendered ${routes.length} pages + 404, ${posts.length} in sitemap and feeds ` +
-		`(${allPosts.length - posts.length} drafts noindexed)`,
+	`prerendered ${routes.length} pages + 404, ${routes.length - allPosts.length + posts.length} in sitemap, ` +
+		`${posts.length} in feeds (${allPosts.length - posts.length} drafts noindexed)`,
 )
