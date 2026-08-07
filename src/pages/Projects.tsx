@@ -1,4 +1,3 @@
-import { Link } from "wouter"
 import { projects } from "../projects"
 
 export function Projects() {
@@ -7,7 +6,7 @@ export function Projects() {
 			<h1 className="mb-2">Projects</h1>
 			<p className="mt-0 mb-12 text-sm opacity-70">Things I have worked on. Everything here is live.</p>
 
-			<ul className="not-prose mb-14 flex flex-col gap-3">
+			<ul className="not-prose flex flex-col gap-3">
 				{projects.map((project) => (
 					<li key={project.url} className="flex items-baseline gap-3">
 						<a
@@ -21,11 +20,6 @@ export function Projects() {
 					</li>
 				))}
 			</ul>
-
-			<hr />
-			<Link href="/" className="text-accent no-underline hover:underline">
-				back to all posts
-			</Link>
 		</>
 	)
 }

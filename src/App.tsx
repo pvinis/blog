@@ -1,4 +1,5 @@
 import { Route, Router, Switch } from "wouter"
+import { SiteHeader } from "./components/SiteHeader"
 import { Home } from "./pages/Home"
 import { Post } from "./pages/Post"
 import { Projects } from "./pages/Projects"
@@ -23,6 +24,8 @@ function Shell() {
 
 	return (
 		<div className="prose prose-quoteless bg-background lg:prose-xl dark:prose-invert prose-blockquote:font-normal prose-blockquote:text-gray-400 mx-auto max-w-prose px-6 pt-32 pb-16 2xl:max-w-[1000px]">
+			<SiteHeader />
+
 			<Switch>
 				<Route path="/" component={Home} />
 				<Route path="/projects" component={Projects} />
