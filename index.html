@@ -4,6 +4,22 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!--
+		globals.css declares color-scheme too, but it is a separate render-blocking
+		stylesheet, so between parsing this html and that css arriving the browser
+		still assumes light. declaring it here closes that window, which is a white
+		flash on first load for anyone in dark mode.
+
+		theme-color paints the browser ui itself, the address bar on mobile safari
+		and chrome. these two hex values are the light and dark --color-background
+		from globals.css, and have to be literals because they are read before any
+		css exists. if the palette changes, change them here as well.
+	-->
+	<meta name="color-scheme" content="light dark" />
+	<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
+	<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#364153" />
+
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
 	<link rel="alternate" type="application/rss+xml" title="Purple Royale" href="/feed/feed.xml" />
