@@ -6,13 +6,12 @@ import profile from "../assets/profile.png"
 export function Home() {
 	return (
 		<>
-			<h1 className="mb-2">{site.title}</h1>
+			<h1 className="mb-2">{site.tagline}</h1>
 
 			<div className="mb-14 flex items-center gap-3 not-prose">
 				<img src={profile} alt="" className="h-14 w-14 shrink-0 rounded-full" />
 				<p className="text-on-background text-base leading-7">
-					Written by <b className="font-semibold">{site.author.name}</b> {site.author.summary}{" "}
-					<a href={`https://github.com/${site.social.github}`}>You can find him on github</a>.
+					Written by <b className="font-semibold">{site.author.name}</b> {site.author.summary}
 				</p>
 			</div>
 

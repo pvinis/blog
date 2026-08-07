@@ -44,6 +44,16 @@ export function headFor(path: string): Head {
 		}
 	}
 
+	if (path === "/projects") {
+		return {
+			title: `Projects - ${site.name}`,
+			description: `Things ${site.author.name} has worked on.`,
+			canonical: canonicalUrl(path),
+			type: "website",
+			noindex: false,
+		}
+	}
+
 	const slug = path.startsWith("/posts/") ? path.slice("/posts/".length) : undefined
 	const post = slug ? getPost(slug) : undefined
 
