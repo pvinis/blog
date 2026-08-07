@@ -2,9 +2,22 @@
 @plugin "@tailwindcss/typography";
 
 :root {
+	/* tells the browser this page has both modes, so it themes the scrollbar,
+	   the overscroll area and any form controls to match instead of assuming
+	   light. without it a dark page gets a light scrollbar and a black canvas. */
+	color-scheme: light dark;
+
 	--color-background: white;
 	--color-on-background: theme("colors.gray.700");
 	--color-accent: theme("colors.pink.600");
+}
+
+/* paint the canvas itself, not just the body. a short page like /projects does
+   not fill the viewport, and relying on background propagation from body left
+   a bar of browser-default colour below the content. */
+html {
+	background-color: var(--color-background);
+	min-height: 100%;
 }
 
 @media (prefers-color-scheme: dark) {
