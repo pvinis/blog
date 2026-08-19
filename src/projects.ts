@@ -17,7 +17,7 @@ export interface Project {
 
 export const projects: Project[] = [
 	// things people can actually use
-	{ name: "LeanScaper", url: "https://apps.apple.com/us/app/leanscaper-ai/id6754711316", tag: "app" },
+	{ name: "LeanScaper mobile app", url: "https://apps.apple.com/us/app/leanscaper-ai/id6754711316", tag: "app" },
 	{ name: "LeanScaper website", url: "https://leanscaper.com", tag: "site" },
 	{ name: "Autographer", url: "https://apps.apple.com/us/app/autographer/id6499551485", tag: "app" },
 	{ name: "Hour Bell", url: "https://quad.codes/hour-bell", tag: "app" },
