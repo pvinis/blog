@@ -23,6 +23,9 @@ export function SiteHeader() {
 				<Link href="/projects" className="text-accent no-underline hover:underline">
 					projects
 				</Link>
+				<Link href="/ai" className="text-accent no-underline hover:underline">
+					ai
+				</Link>
 				<a
 					href={`https://github.com/${site.social.github}`}
 					className="text-accent no-underline hover:underline"

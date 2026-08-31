@@ -70,6 +70,7 @@ const linkFor = (post: Post) => post.attributes.external ?? postUrl(post)
 const routes = [
 	{ url: "/", out: "index.html" },
 	{ url: "/projects", out: "projects.html" },
+	{ url: "/ai", out: "ai.html" },
 	...allPosts.map((post: Post) => ({ url: `/posts/${post.slug}`, out: `posts/${post.slug}.html` })),
 ]
 
@@ -92,6 +93,10 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 	</url>
 	<url>
 		<loc>${escapeXml(url("/projects"))}</loc>
+		<changefreq>monthly</changefreq>
+	</url>
+	<url>
+		<loc>${escapeXml(url("/ai"))}</loc>
 		<changefreq>monthly</changefreq>
 	</url>
 ${posts

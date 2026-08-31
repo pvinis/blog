@@ -3,6 +3,7 @@ import { SiteHeader } from "./components/SiteHeader"
 import { Home } from "./pages/Home"
 import { Post } from "./pages/Post"
 import { Projects } from "./pages/Projects"
+import { AiInfo } from "./pages/AiInfo"
 import { NotFound } from "./pages/NotFound"
 import { useDocumentTitle } from "./useDocumentTitle"
 
@@ -29,6 +30,7 @@ function Shell() {
 			<Switch>
 				<Route path="/" component={Home} />
 				<Route path="/projects" component={Projects} />
+				<Route path="/ai" component={AiInfo} />
 				<Route path="/posts/:slug">{(params) => <Post slug={params.slug} />}</Route>
 				<Route component={NotFound} />
 			</Switch>
