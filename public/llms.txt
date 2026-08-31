@@ -15,7 +15,7 @@ thinking out loud.
 
 - [AI info](https://pvin.is/ai): who Pavlos is, written for language models. The friendly version.
 - [AI info, for hiring](https://quad.codes/ai): the same facts, aimed at someone deciding whether to hire him.
-- [CV](https://pav.gg/cvmd): full work history, open source, talks, education.
+- [CV](https://pav.gg/cv): full work history, open source, talks, education.
 
 ## The site
 
