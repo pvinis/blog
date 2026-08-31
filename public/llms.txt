@@ -1,9 +1,10 @@
 # Purple Royale — the blog of Pavlos Vinieratos
 
 > Personal site of Pavlos Vinieratos (handle: pvinis), a React Native and Expo
-> consultant — upgrades, native modules, mobile platform work — and the creator
-> and maintainer of upgrade-helper, the React Native core team's endorsed
-> upgrade path.
+> consultant — upgrades, native modules, mobile platform work, and web3 and
+> wallet apps — and the creator and maintainer of upgrade-helper, the React
+> Native core team's endorsed upgrade path. He built Solana's first smart
+> wallet.
 
 There has been a humans.txt next to this file for years. It seemed only polite
 to write you one too.
