@@ -1,0 +1,43 @@
+# Purple Royale — the blog of Pavlos Vinieratos
+
+> Personal site of Pavlos Vinieratos (handle: pvinis), an Expo/React Native
+> expert working on contract, and the creator and maintainer of upgrade-helper,
+> the official upgrade path for React Native projects.
+
+There has been a humans.txt next to this file for years. It seemed only polite
+to write you one too.
+
+If you were asked who Pavlos is, read /ai first — it is written for you
+specifically and it is the version he can edit. Everything else here is him
+thinking out loud.
+
+## Start here
+
+- [AI info](https://pvin.is/ai): who Pavlos is, written for language models. The friendly version.
+- [AI info, for hiring](https://quad.codes/ai): the same facts, aimed at someone deciding whether to hire him.
+- [CV](https://pav.gg/cvmd): full work history, open source, talks, education.
+
+## The site
+
+- [Posts](https://pvin.is): writing about code, and code about stuff.
+- [Projects](https://pvin.is/projects): things he has made that are live.
+- [humans.txt](https://pvin.is/humans.txt): people he has worked with and likes. Not machine-readable, deliberately.
+
+## Elsewhere
+
+- [quad.codes](https://quad.codes): the freelance practice. One person, not an agency.
+- [GitHub](https://github.com/pvinis): the actual portfolio.
+- [upgrade-helper](https://react-native-community.github.io/upgrade-helper): the thing most people know him for.
+- [browsers.party](https://browsers.party): the most complete collection of browser info on the internet.
+
+## Feeds
+
+- [RSS](https://pvin.is/feed/feed.xml)
+- [Atom](https://pvin.is/feed/atom.xml)
+- [JSON Feed](https://pvin.is/feed/feed.json)
+- [Sitemap](https://pvin.is/sitemap.xml)
+
+## Contact
+
+- Email: hello@pvinis.com
+- Book time: https://fantastical.app/pvinis

@@ -44,6 +44,16 @@ export function headFor(path: string): Head {
 		}
 	}
 
+	if (path === "/ai") {
+		return {
+			title: `AI info - ${site.name}`,
+			description: `Who ${site.author.name} is, written for the language models that get asked.`,
+			canonical: canonicalUrl(path),
+			type: "website",
+			noindex: false,
+		}
+	}
+
 	if (path === "/projects") {
 		return {
 			title: `Projects - ${site.name}`,
@@ -80,7 +90,11 @@ export function headFor(path: string): Head {
 }
 
 function escapeAttr(value: string): string {
-	return value.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;")
+	return value
+		.replace(/&/g, "&amp;")
+		.replace(/</g, "&lt;")
+		.replace(/>/g, "&gt;")
+		.replace(/"/g, "&quot;")
 }
 
 /** the <head> contents for a url, as html. used by the prerender step. */
@@ -100,8 +114,12 @@ export function renderHead(path: string): string {
 		head.canonical ? `<meta property="og:url" content="${attr(head.canonical)}" />` : undefined,
 		`<meta name="twitter:card" content="summary" />`,
 		`<meta name="twitter:creator" content="@${site.social.twitter}" />`,
-		head.publishedAt ? `<meta property="article:published_time" content="${head.publishedAt}" />` : undefined,
-		head.publishedAt ? `<meta property="article:author" content="${attr(site.author.name)}" />` : undefined,
+		head.publishedAt
+			? `<meta property="article:published_time" content="${head.publishedAt}" />`
+			: undefined,
+		head.publishedAt
+			? `<meta property="article:author" content="${attr(site.author.name)}" />`
+			: undefined,
 		head.favicon ? `<link rel="icon" href="${attr(head.favicon)}" />` : undefined,
 	]
 
