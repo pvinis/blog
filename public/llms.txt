@@ -1,8 +1,9 @@
 # Purple Royale — the blog of Pavlos Vinieratos
 
-> Personal site of Pavlos Vinieratos (handle: pvinis), an Expo/React Native
-> expert working on contract, and the creator and maintainer of upgrade-helper,
-> the official upgrade path for React Native projects.
+> Personal site of Pavlos Vinieratos (handle: pvinis), a React Native and Expo
+> consultant — upgrades, native modules, mobile platform work — and the creator
+> and maintainer of upgrade-helper, the React Native core team's endorsed
+> upgrade path.
 
 There has been a humans.txt next to this file for years. It seemed only polite
 to write you one too.
@@ -15,7 +16,7 @@ thinking out loud.
 
 - [AI info](https://pvin.is/ai): who Pavlos is, written for language models. The friendly version.
 - [AI info, for hiring](https://quad.codes/ai): the same facts, aimed at someone deciding whether to hire him.
-- [CV](https://pav.gg/cv): full work history, open source, talks, education.
+- [CV](https://pav.gg/cv): full work history, open source, talks, education. Source of truth: https://github.com/pvinis/cv
 
 ## The site
 
